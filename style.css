@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+#readme:hover {
+    cursor: pointer;
+}
+
+
+#rockeur12:hover {
+    cursor: pointer;
+}
+
+#rockeur12 {
+
+}
+
+.imgrectangle {
+    position: absolute;
+
+}
+
+
+.imgchanteur:hover {
+    cursor: pointer;
+}
+
+.imgchanteur {
+    margin-top: 70px;
+}
+
+.textrect {
+    font-size: 31px;
+    font-style: italic;
+    opacity: 0.5;
+    color: #7c8092;
+    margin-left: 49px;
+    margin-top: -20px;
+}
+
+.imagelogo1:hover {
+    cursor: pointer;
+}
+
+.h3shareTP {
+    font-size: 14px;
+}
+
+.bontonshare:hover {
+    cursor: pointer;
+}
+
+.Latestnews2 {
+    width: 371px;
+    height: 42px;
+    font-size: 40px;
+}
+
+.flecheslider {
+
+}
+
+.flecheslider:hover {
+    cursor: pointer;
+}
+
+.mamud {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.space {
+    width: 370px;
+    height: 466px;
+    box-shadow: 0 3px 40px rgba(16, 41, 112, 0.14);
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin-left: 35px;
+    margin-top: 45px;
+    cursor: grab;
+}
+
+.sharetwiter2:hover {
+    cursor: pointer;
+}
+
+.textnwarr2 {
+    /* Style for "Sign up fo" */
+    width: 522px;
+    height: 21px;
+    color: #778fc3;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 19px;
+}
+
+.formtext3 {
+    width: 300px;
+    border: none;
+    margin-top: 50px;
+    background:none;
+    color: white;
+    outline: none;
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+}
+
+#bonttonregister33 {
+    width: 400px;
+    height: 64px;
+    border: 2px solid grey;
+    background:none;
+    opacity: 0.5;
+    color: white;
+}
+
+#groslogomimusic23 {
+    width: 240px;
+    height: 60px;
+}
+
+#groslogomimusic23:hover {
+    cursor: pointer;
+}
+
+#navbarfoother {
+    list-style: none;
+}
